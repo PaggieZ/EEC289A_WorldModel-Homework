@@ -31,7 +31,7 @@ class StudentWorldModel(nn.Module):
 
     def forward(self, obs_norm: torch.Tensor, act_norm: torch.Tensor, hidden=None):
         if self.training:
-            obs_norm = obs_norm + torch.randn_like(obs_norm) * 0.004
+            obs_norm = obs_norm + torch.randn_like(obs_norm) * 0.015
 
         x = self.act(self.input_layer(torch.cat([obs_norm, act_norm], dim=-1)))
 
