@@ -13,7 +13,7 @@ training:
   smoke_updates: 120
   train_sequence_length: 256
   learning_rate: 5.0e-4
-  grad_clip_norm: 5.0
+  grad_clip_norm: 1.0
   eval_every: 200
   smoke_eval_every: 20
   val_horizon: 200
@@ -23,7 +23,7 @@ training:
 
 loss:
   one_step_weight: 1.5
-  rollout_weight: 3.0
+  rollout_weight: 2.0
   rollout_train_horizon: 80
 
 eval:
